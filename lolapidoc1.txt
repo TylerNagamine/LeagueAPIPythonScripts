@@ -1,0 +1,45 @@
+ #region Summoner v1.4
+    #region Summoner info by name
+    public class SummonerDto
+    {
+        public long id { get; set; }
+        public string name { get; set; }
+        public int profileIconId { get; set; }
+        public long revisionDate { get; set; }
+        public long summonerLevel { get; set; }
+    }
+    #endregion
+    #region Summoner mastery pages
+    public class MasteryPagesDto
+    {
+        public HashSet<MasteryPageDto> pages { get; set; }
+        public long summonerId { get; set; }
+    }
+    public class MasteryPageDto
+    {
+        public bool current { get; set; }
+        public long id { get; set; }
+        public List<MasteryDto> masteries { get; set; }
+        public string name { get; set; }
+    }
+    #endregion
+    #region Rune pages by summoner id
+    public class RunePagesDto
+    {
+        public HashSet<RunePageDto> pages { get; set; }
+        public long summonerId { get; set; }
+    }
+    public class RunePageDto
+    {
+        public bool current { get; set; }
+        public long id { get; set; }
+        public string name { get; set; }
+        public HashSet<RuneSlotDto> slots { get; set; }
+    }
+    public class RuneSlotDto
+    {
+        public int runeId { get; set; }
+        public int runeSlotId { get; set; }
+    }
+    #endregion
+    #endregion

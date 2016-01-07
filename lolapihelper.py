@@ -4,7 +4,14 @@ from os import walk
 from os import rename
 from os import remove
 
-# Scrubs the delim from the target file at direct
+###
+### lolapihelper.py
+### Given the copy+pasted names and data types from
+### the riot API, creates a public class to hold that data
+###
+### Example file: lolapidoc1.txt
+###
+
 def scrub(direct):
 	newf = direct[0:-4] + "1" + direct[-4:]
 

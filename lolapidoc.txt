@@ -1,0 +1,50 @@
+SummonerSpellListDto - This object contains summoner spell list data.
+Name	Data Type	Description
+data	Map[string, SummonerSpellDto]	
+type	string	
+version	string	
+SummonerSpellDto - This object contains summoner spell data.
+Name	Data Type	Description
+cooldown	List[double]	
+cooldownBurn	string	
+cost	List[int]	
+costBurn	string	
+costType	string	
+description	string	
+effect	List[object]	This field is a List of List of Double.
+effectBurn	List[string]	
+id	int	
+image	ImageDto	
+key	string	
+leveltip	LevelTipDto	
+maxrank	int	
+modes	List[string]	
+name	string	
+range	object	This field is either a List of Integer or the String 'self' for spells that target one's own champion.
+rangeBurn	string	
+resource	string	
+sanitizedDescription	string	
+sanitizedTooltip	string	
+summonerLevel	int	
+tooltip	string	
+vars	List[SpellVarsDto]	
+ImageDto - This object contains image data.
+Name	Data Type	Description
+full	string	
+group	string	
+h	int	
+sprite	string	
+w	int	
+x	int	
+y	int	
+LevelTipDto - This object contains champion level tip data.
+Name	Data Type	Description
+effect	List[string]	
+label	List[string]	
+SpellVarsDto - This object contains spell vars data.
+Name	Data Type	Description
+coeff	List[double]	
+dyn	string	
+key	string	
+link	string	
+ranksWith	string

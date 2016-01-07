@@ -4,6 +4,15 @@ from os import walk
 from os import rename
 from os import remove
 
+###
+### lolapihelper2.py
+### Given the output of lolapihelper.py, or a list of 
+### classes, creates the IEquatable for the data inside
+### the class
+### TODO: Missing specific == for lists/dicts/sets
+### Example file: lolapidoc2.txt
+###
+
 def scrub(direct):
 	newf = direct[0:-4] + "2" + direct[-4:]
 

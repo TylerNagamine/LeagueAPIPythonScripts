@@ -1,0 +1,100 @@
+#region Summoner v1.4
+#region Summoner info by name
+public class SummonerDto : IEquatable<SummonerDto>
+{
+	public long id { get; set; }
+	public string name { get; set; }
+	public int profileIconId { get; set; }
+	public long revisionDate { get; set; }
+	public long summonerLevel { get; set; }
+
+	public bool Equals(SummonerDto other)
+	{
+		if (this.id == other.id &&
+		this.name == other.name &&
+		this.profileIconId == other.profileIconId &&
+		this.revisionDate == other.revisionDate &&
+		this.summonerLevel == other.summonerLevel)
+			return true;
+		return false;
+	}
+}
+#endregion
+#region Summoner mastery pages
+public class MasteryPagesDto : IEquatable<MasteryPagesDto>
+{
+	public HashSet<MasteryPageDto> pages { get; set; }
+	public long summonerId { get; set; }
+
+	public bool Equals(MasteryPagesDto other)
+	{
+		if (this.pages == other.pages &&
+		this.summonerId == other.summonerId)
+			return true;
+		return false;
+	}
+}
+public class MasteryPageDto : IEquatable<MasteryPageDto>
+{
+	public bool current { get; set; }
+	public long id { get; set; }
+	public List<MasteryDto> masteries { get; set; }
+	public string name { get; set; }
+
+	public bool Equals(MasteryPageDto other)
+	{
+		if (this.current == other.current &&
+		this.id == other.id &&
+		this.masteries == other.masteries &&
+		this.name == other.name)
+			return true;
+		return false;
+	}
+}
+#endregion
+#region Rune pages by summoner id
+public class RunePagesDto : IEquatable<RunePagesDto>
+{
+	public HashSet<RunePageDto> pages { get; set; }
+	public long summonerId { get; set; }
+
+	public bool Equals(RunePagesDto other)
+	{
+		if (this.pages == other.pages &&
+		this.summonerId == other.summonerId)
+			return true;
+		return false;
+	}
+}
+public class RunePageDto : IEquatable<RunePageDto>
+{
+	public bool current { get; set; }
+	public long id { get; set; }
+	public string name { get; set; }
+	public HashSet<RuneSlotDto> slots { get; set; }
+
+	public bool Equals(RunePageDto other)
+	{
+		if (this.current == other.current &&
+		this.id == other.id &&
+		this.name == other.name &&
+		this.slots == other.slots)
+			return true;
+		return false;
+	}
+}
+public class RuneSlotDto : IEquatable<RuneSlotDto>
+{
+	public int runeId { get; set; }
+	public int runeSlotId { get; set; }
+
+	public bool Equals(RuneSlotDto other)
+	{
+		if (this.runeId == other.runeId &&
+		this.runeSlotId == other.runeSlotId)
+			return true;
+		return false;
+	}
+}
+#endregion
+#endregion
